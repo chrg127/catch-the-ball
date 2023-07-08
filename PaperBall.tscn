@@ -1,16 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7bbw4ptgy000"]
+[gd_scene load_steps=5 format=3 uid="uid://b7bbw4ptgy000"]
 
+[ext_resource type="Script" path="res://PaperBall.gd" id="1_2a747"]
 [ext_resource type="Texture2D" uid="uid://x04akknwrbir" path="res://graphics/paper.png" id="1_wbgjg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_we0lh"]
-radius = 14.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y2vdc"]
+bounce = 3.0
 
-[node name="RigidBody2D" type="RigidBody2D"]
-position = Vector2(541, 328)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ko7pg"]
+radius = 14.0357
+
+[node name="PaperBall" type="RigidBody2D"]
+position = Vector2(540, 331)
+physics_material_override = SubResource("PhysicsMaterial_y2vdc")
+angular_velocity = 6.98132
+script = ExtResource("1_2a747")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_wbgjg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_we0lh")
+shape = SubResource("CircleShape2D_ko7pg")

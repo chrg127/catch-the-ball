@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6vjaxxy8q3wc"]
+
+[ext_resource type="Script" path="res://BallGenerator.gd" id="1_v5i27"]
+[ext_resource type="PackedScene" uid="uid://b7bbw4ptgy000" path="res://PaperBall.tscn" id="2_3hs8r"]
+
+[node name="BallGenerator" type="Marker2D"]
+position = Vector2(202, 159)
+script = ExtResource("1_v5i27")
+ball_scene = ExtResource("2_3hs8r")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
