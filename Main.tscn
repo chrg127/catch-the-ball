@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceooqo2krg01o"]
+
+[ext_resource type="PackedScene" uid="uid://cerhm417gyv6n" path="res://BallGenerator.tscn" id="1_mgnuv"]
+[ext_resource type="PackedScene" uid="uid://b5q5fnnf6bdho" path="res://Bin.tscn" id="2_xc7nf"]
+
+[node name="Main" type="Node"]
+
+[node name="BallGenerator" parent="." instance=ExtResource("1_mgnuv")]
+
+[node name="BinArea" parent="." instance=ExtResource("2_xc7nf")]
+position = Vector2(690, 415)
+scale = Vector2(0.15541, 0.132572)

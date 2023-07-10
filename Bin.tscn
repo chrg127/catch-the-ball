@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5q5fnnf6bdho"]
+
+[ext_resource type="Texture2D" uid="uid://borox8q7y28v" path="res://graphics/bin_front.png" id="1_r203a"]
+[ext_resource type="Texture2D" uid="uid://c88q5v3v17ll2" path="res://graphics/bin_back.png" id="2_fv8fe"]
+[ext_resource type="Script" path="res://BinBack.gd" id="3_tdta0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7x6mo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eik5p"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_30p5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilnex"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vuj1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hfkl"]
+
+[node name="BinArea" type="Area2D"]
+scale = Vector2(0.26213, 0.240141)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 29.1495)
+scale = Vector2(45.3609, 45.7087)
+polygon = PackedVector2Array(-10, -10, 10, -10, 6, 12, -6, 12)
+
+[node name="SideLeft" type="StaticBody2D" parent="."]
+position = Vector2(-366.347, 68.6976)
+rotation = 1.38757
+scale = Vector2(43.7768, 4.81533)
+physics_material_override = SubResource("PhysicsMaterial_7x6mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideLeft"]
+shape = SubResource("RectangleShape2D_eik5p")
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+position = Vector2(-11.4447, 537.183)
+scale = Vector2(31.4454, 5.46365)
+physics_material_override = SubResource("PhysicsMaterial_30p5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+shape = SubResource("RectangleShape2D_ilnex")
+
+[node name="SideRight" type="StaticBody2D" parent="."]
+position = Vector2(341.726, 65.0794)
+rotation = 1.75269
+scale = Vector2(44.9501, 5.14898)
+physics_material_override = SubResource("PhysicsMaterial_vuj1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideRight"]
+shape = SubResource("RectangleShape2D_5hfkl")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -45.8063)
+scale = Vector2(5, 5)
+
+[node name="BinFront" type="Sprite2D" parent="Node2D"]
+position = Vector2(-3.05176e-05, 0)
+texture = ExtResource("1_r203a")
+
+[node name="BinBack" type="Sprite2D" parent="Node2D"]
+position = Vector2(-6.10352e-05, 0)
+texture = ExtResource("2_fv8fe")
+script = ExtResource("3_tdta0")

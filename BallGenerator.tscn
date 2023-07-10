@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://6vjaxxy8q3wc"]
+[gd_scene load_steps=3 format=3 uid="uid://cerhm417gyv6n"]
 
 [ext_resource type="Script" path="res://BallGenerator.gd" id="1_v5i27"]
 [ext_resource type="PackedScene" uid="uid://b7bbw4ptgy000" path="res://PaperBall.tscn" id="2_3hs8r"]
